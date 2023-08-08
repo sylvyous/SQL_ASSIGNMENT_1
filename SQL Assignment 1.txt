@@ -1,0 +1,34 @@
+dvd_rental.sql is a database that represents the records of two different dvd stores, cataloguing their dvd leases, 
+information on its customers, lease records, payments, details on the films available for rent, as well as information 
+on its employees and inventory.
+
+
+In this database we can find the addresses table. This table provides information about the street addresses, located
+in each district and city. The city is given by a city_id, this id is a unique key that designates the city, and can 
+be looked up in city table. similarly the country is given by a unique country_id stored in the country table.
+
+The store table contains a store_id key, to identify the two stores and to give their respective address_id and  
+manager_staff_id.
+
+In the customer table we find full information on customers that have rented dvds, each customer is given a unique
+customer ID, and each field contains relevant information on each of the customers this includes their addresses given
+again by an address key, first name, last name and at which store they have rented the dvd given by the store_id.
+
+Furthermore, each rental made is recorded under a unique id in the rental table which give us data about the date the
+rental was made, the customer through their id, along with the staff_id of the employee that made the transaction.
+
+
+The staff_id leads us to the staff table that contains relevant information about the employees.
+including their name, last name, address_id and the store_id of the store they work at.
+
+
+The rentals connects us to the payment table, that contains the records of the customer_id, the staff_id , rental_id
+as well as the amount and payment date pertaining to each individual transaction. This tells us about the customer that
+made the purchase, and which employee accepted the payment.
+
+Finally each film is given a film id along with the title of the movie and a short description. Under the language_id 
+column we find an id number that can be used to look up the language of the film from the language table.
+we also have data on the actors in the actor table, each actor has their own unique id.
+This way we can see information on which actors appear in which movies, through the film_actor table that assigns an 
+actor_id to every film_id.
+
